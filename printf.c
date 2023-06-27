@@ -37,6 +37,10 @@ int my_printf(const char *format, ...)
 			i++;
 			continue;
 		}
+		else if (format[i + 1] == '%')
+		{
+			_putchar('%');
+		}
 
 		r_value += 1;
 	}
