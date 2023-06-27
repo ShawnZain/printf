@@ -16,6 +16,7 @@ int main(void)
 	printf("Return Value: %d\n", x);
 	printf("Char c: %c\n", c);
 	printf("String str: %s\n", str);
+	printf("I am a number 12\n");
 
 	printf("----------------------------------\n");
 
@@ -23,6 +24,7 @@ int main(void)
 	my_printf("\nThis is a string printed with my_printf function\n");
 	my_printf("Char c: %c\n", c);
 	my_printf("String str: %s\n", str);
+	printf("I am a number 12\n");
 
 	return (0);
 }

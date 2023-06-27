@@ -40,7 +40,9 @@ int my_printf(const char *format, ...)
 		else if (format[i + 1] == '%')
 		{
 			_putchar('%');
+			h++;
 		}
+		else if (format[i + 1] == 'd'
 
 		r_value += 1;
 	}
