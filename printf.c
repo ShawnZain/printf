@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "main.h"
 
 /**
  * my_printf - prints arguments passed to the std output
@@ -40,9 +40,13 @@ int my_printf(const char *format, ...)
 		else if (format[i + 1] == '%')
 		{
 			_putchar('%');
-			h++;
+			i++;
 		}
-		else if (format[i + 1] == 'd'
+		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
+		{
+			r_value += print_int(va_arg(args, int));
+			i++;
+		}
 
 		r_value += 1;
 	}

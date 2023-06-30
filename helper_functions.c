@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "main.h"
 
 /**
  * _putchar - prints out single characters to std out
@@ -27,4 +27,53 @@ int print_string(char *c)
 	}
 
 	return (r);
+}
+
+/**
+ * digit_count - counts the number of digits in an integer
+ * @num: number passed for us to find out the numbe of digits
+ * Return: number of digits
+ */
+
+int digit_count(int num)
+{
+	int *counter;
+	int i;
+
+	counter = malloc(sizeof(int) * 1034);
+
+	for (i = 0; num != 0; i++)
+	{
+		counter[i] = num % 10;
+		num = num / 10;
+	}
+	free(counter);
+
+	return (i);
+}
+
+/**
+ * print_int - prints integers
+ * @num: number to print out
+ * Return: the number of times that a number has been printed
+ */
+
+int print_int(int num)
+{
+	int ret_val;
+	int n;
+
+	if (num / 10 == 0)
+	{
+		_putchar(num + '0');
+		return (0);
+	}
+	else
+	{
+		n = num / 10;
+		print_int(n);
+		_putchar((num % 10) + '0');
+	}
+
+	return (digit_count(num));
 }
